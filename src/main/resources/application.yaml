@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: "secrets-revealed"
+
+trufflehog:
+  binary: "trufflehog"
+
+  flags:
+    version: "--version"
+
+    scan-repository:
+      source: "github"
+      repository: "--repo="
+      default-flags:
+        - "--json"
+        - "--log-level=-1"
+        - "--no-update"
+        - "--no-color"
